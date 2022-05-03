@@ -9,18 +9,18 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "What is the title of your project?"
+        message: "What is the title of your project?",
     },
     {
         type: 'input',
         name: 'description',
-        message: ' Provide a description of the project (Required)'
+        message: ' Provide a description of the project (Required)',
       },
       
      {
          type:"input",
          name: "installer",
-         message: "Does the user need any installation information?"
+         message: "Does the user need any installation information?",
 
      },
      {
