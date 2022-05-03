@@ -16,38 +16,56 @@ const questions = [
         name: 'description',
         message: ' Provide a description of the project (Required)'
       },
+      
+     {
+         type:"input",
+         name: "installer",
+         message: "Does the user need any installation information?"
+
+     },
+     {
+         type:"input",
+         name: "usage",
+         message: "What does the user need to know to use this app?",
+          
+     },
+     {
+         type:"list",
+         name: "license",
+         message:"What license do you want to use?",
+         choices: ["MIT","Apache","MPL", "None"]
+
+     },
       {
-        type:'checkbox',
-        name: 'languages',
-        message: 'What did you build this project with? (Check all that apply)',
-        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+          type: "input",
+          name: "contribution",
+          message: "What are contribution guide lines? ",
+
+          //git hub username in template i link it to the git hub
+          
       },
       {
-        type: 'input',
-        name: 'link',
-        message: 'Enter the GitHub link to your project. (Required)'
-    
+          type: "input",
+          name: "test",
+          message: "How can you test this app?",
       },
       {
-        type: 'confirm',
-          name: 'feature',
-          message: 'Would you like to feature this project?',
-          default: false
-    
+          type: "input",
+          name: "github",
+          message: "What is your github username?",
       },
       {
-          type: 'confirm',
-          name: 'confirmAddProject',
-          message: 'Would you like to enter another project?',
-          default: false
-    
+          type:"input",
+          name: "email",
+          message: "What is your email address?",
       },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile (fileName, data);
     console.log(data, fileName);
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+    
 
 
 }
