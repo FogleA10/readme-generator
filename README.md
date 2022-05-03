@@ -1,4 +1,5 @@
-# Professional README Generator Starter Code
+# Professional README Generator
+This is a node.js project that creates a professional ReadMe.
 
 [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
